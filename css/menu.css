@@ -1,0 +1,15 @@
+.main_body{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.main_body div{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main_body input{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}

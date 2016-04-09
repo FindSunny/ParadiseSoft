@@ -1,0 +1,39 @@
+.main_body{
+	padding-top: 50px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.main_body div{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.main_body input{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}
+
+.feiyong select{
+	width: 100px;
+}
+
+.zhichuren select{
+	width: 100px;
+}
+
+.jine input{
+	width: 100px;
+	height: auto;
+}
+
+.beizhu input{
+	width: 100px;
+	height: auto;
+}
+
+.caozuo input{
+	width: auto;
+	height: auto;
+}
