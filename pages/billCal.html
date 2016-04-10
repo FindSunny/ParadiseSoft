@@ -2,21 +2,36 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <title>ParadiseSoft</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="../css/billCal.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		
+	<link rel="stylesheet" href="../css/mui.min.css">
+     <link rel="stylesheet" href="../css/billCal.css" />
     
-    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/billCal.js"></script>
+
 <body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+		<h1 class="mui-title">统计</h1>
+	</header>
+	
+	<div class="mui-content">
 		<div class="main_body">
-		
-		<div class="feiyong">
-			<input type="button" value="总支出概览" />		
+			
+			<div class="feiyong">
+				<!--<input type="button" value="总支出概览" />-->	
+				<button class="mui-btn mui-btn-primary">总支出概览</button>
+			</div>
+			<div class="zhichuren">
+				<!--<input type="button" value="个性化平均" />-->
+				<button class="mui-btn mui-btn-primary">个性化平均</button>
+			</div>		
+			
 		</div>
-		<div class="zhichuren">
-			<input type="button" value="个性化平均" />
-		</div>
-		
-		
 	</div>
 </body>
 </html>

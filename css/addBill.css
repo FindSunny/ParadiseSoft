@@ -16,20 +16,20 @@
 }
 
 .feiyong select{
-	width: 100px;
+	width: 150px;
 }
 
 .zhichuren select{
-	width: 100px;
+	width: 150px;
 }
 
 .jine input{
-	width: 100px;
+	width: 150px;
 	height: auto;
 }
 
-.beizhu input{
-	width: 100px;
+.beizhu textarea{
+	width: 150px;
 	height: auto;
 }
 

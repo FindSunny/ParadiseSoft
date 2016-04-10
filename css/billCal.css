@@ -9,8 +9,15 @@
 	padding-bottom: 20px;
 }
 
-.main_body input{
+/*START Edit 0410 Suo*/
+/*.main_body input{
+	width: 200px;
+	height: 40px;
+	font-size: 20px;
+}}*/
+.main_body button{
 	width: 200px;
 	height: 40px;
 	font-size: 20px;
 }
+/*End Edit 0410 Suo*/
