@@ -29,4 +29,10 @@ mui.init({
 });
 mui.plusReady(function() {
 	console.log("当前页面URL："+plus.webview.currentWebview().getURL());	
+	
+	var self = plus.webview.currentWebview();
+	var title = self.title;
+	
+	jQuery('.mui-title').html(title);
+	
 });

@@ -30,34 +30,42 @@ mui.init({
 mui.plusReady(function() {
 	console.log("当前页面URL："+plus.webview.currentWebview().getURL());
 	
-	//交通费用
-	document.getElementById('traffic').addEventListener('tap', function() {
-		openWindow();
+//*****START Edit Suo 2016/04/10 11:13*****
+//	//交通费用
+//	document.getElementById('traffic').addEventListener('tap', function() {
+//		openWindow();
+//	});
+//	
+//	//住宿费用
+//	document.getElementById('shelter').addEventListener('tap', function() {
+//		openWindow();
+//	});
+//	
+//	//三餐费用
+//	document.getElementById('food').addEventListener('tap', function() {
+//		openWindow();
+//	});
+//	
+//	//玩乐费用
+//	document.getElementById('fun').addEventListener('tap', function() {
+//		openWindow();
+//	});
+	jQuery(".mui-btn").click(function(){
+		var title = jQuery(this).html();
+		openWindow(title);
 	});
-	
-	//住宿费用
-	document.getElementById('shelter').addEventListener('tap', function() {
-		openWindow();
-	});
-	
-	//三餐费用
-	document.getElementById('food').addEventListener('tap', function() {
-		openWindow();
-	});
-	
-	//玩乐费用
-	document.getElementById('fun').addEventListener('tap', function() {
-		openWindow();
-	});
+//*****End Edit Suo 2016/04/10 11:13*****
 
-	
 });
 
-function openWindow(){
+function openWindow(title){
 	//打开关于页面
 	  mui.openWindow({
 	    url: '../pages/addBill.html', 
-	    id:'info'
+	    id:'info',
+	    extras:{
+	        title: title
+	    }
 	  });
 }
 
@@ -65,20 +73,18 @@ function openWindow(){
 //处理逻辑：1秒内，连续两次按返回键，则退出应用；
 var first = null;
 mui.back = function() {
-	if (showMenu) {
-		closeMenu();
+
+	//首次按键，提示‘再按一次退出应用’
+	if (!first) {
+		first = new Date().getTime();
+		mui.toast('再按一次退出应用');
+		setTimeout(function() {
+			first = null;
+		}, 1000);
 	} else {
-		//首次按键，提示‘再按一次退出应用’
-		if (!first) {
-			first = new Date().getTime();
-			mui.toast('再按一次退出应用');
-			setTimeout(function() {
-				first = null;
-			}, 1000);
-		} else {
-			if (new Date().getTime() - first < 1000) {
-				plus.runtime.quit();
-			}
+		if (new Date().getTime() - first < 1000) {
+			plus.runtime.quit();
 		}
 	}
+	
 };
