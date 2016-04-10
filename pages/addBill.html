@@ -53,7 +53,13 @@
 				<!--<input type="button" value="保存" />
 				<input type="button" value="返回" />-->
 				<button type="button" class="mui-btn mui-btn-primary">保存</button>
-				<button type="button" class="mui-btn mui-btn-primary">返回</button>
+				 <!--在mui框架中，有三种操作会触发页面关闭（执行mui.back方法）：
+
+				1 点击包含.mui-action-back类的控件
+				2 在屏幕内，向右快速滑动
+				3 Android手机按下back按键-->
+				//关闭按钮：添加类mui-action-back
+				<button type="button" class="mui-btn mui-btn-primary mui-action-back">返回</button>
 			</div>
 		
 		</div>

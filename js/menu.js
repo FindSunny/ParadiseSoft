@@ -11,6 +11,7 @@ mui.init({
 	
 	//手势配置
 	gestureConfig: {
+		tab: true,
 		doubletap: true
 	},
 	//子页面
@@ -28,4 +29,14 @@ mui.init({
 });
 mui.plusReady(function() {
 	console.log("当前页面URL："+plus.webview.currentWebview().getURL());
+	
+	//tap为mui封装的单击事件
+	document.getElementById('traffic').addEventListener('tap', function() {
+	  //打开关于页面
+	  mui.openWindow({
+	    url: '../pages/addBill.html', 
+	    id:'info'
+	  });
+	});
+	
 });
