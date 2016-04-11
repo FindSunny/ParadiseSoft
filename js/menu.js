@@ -52,16 +52,22 @@ mui.plusReady(function() {
 //	});
 	jQuery(".mui-btn").click(function(){
 		var title = jQuery(this).html();
-		openWindow(title);
+		var url = "";
+		if(jQuery(this).attr('id') !== 'pay'){
+			url = '../pages/addBill.html';
+		}else{
+			url = '../pages/billCal.html';
+		}
+		openWindow(title, url);
 	});
 //*****End Edit Suo 2016/04/10 11:13*****
 
 });
 
-function openWindow(title){
+function openWindow(title, url){
 	//打开关于页面
 	  mui.openWindow({
-	    url: '../pages/addBill.html', 
+	    url: url, 
 	    id:'info',
 	    extras:{
 	        title: title

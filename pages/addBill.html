@@ -16,36 +16,42 @@
     
 <body>
 	<header class="mui-bar mui-bar-nav">
-		<a class="mui-icon mui-icon-bars mui-pull-left mui-plus-visible"></a>
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		<h1 class="mui-title">记账</h1>
 	</header>
 	<div class="mui-content">
 		<div class="main_body">
 		
 			<div class="feiyong">
-				<label>费用分类：</label>
-				<select  class="mui-btn">
-					<option>交通费用</option>
-					<option>住宿费用</option>
+				<!--<label>费用分类：</label>-->
+				<button type="button" class="mui-btn mui-btn-success" id='traffic'>费用分类：</button>
+				<select id='kind_select' class="mui-btn">
+					<!--<option>交通费用</option>-->
+					<!--<option>住宿费用</option>
 					<option>三餐费用</option>
-					<option>玩乐费用</option>
-				</select>			
+					<option>玩乐费用</option>-->
+				</select>	
+				<span id='kind_add' class="mui-icon mui-icon-plusempty"></span>
 			</div>
 			<div class="zhichuren">
-				<label>付费人名：</label>
-				<select class="mui-btn">
-					<option>蒙磊</option>
+				<!--<label>付费人名：</label>-->
+				<button type="button" class="mui-btn mui-btn-purple" id='traffic'>付费人名:</button>
+				<select id='person_select' class="mui-btn">
+					<!--<option>蒙磊</option>
 					<option>铁铁</option>
 					<option>骚话</option>
-					<option>大屌哥</option>
+					<option>大屌哥</option>-->
 				</select>
+				<span id='person_add' class="mui-icon mui-icon-personadd"></span>
 			</div>
 			<div class="jine">
-				<label>支出金额：</label>
+				<!--<label>支出金额：</label>-->
+				<button type="button" class="mui-btn mui-btn-danger" id='traffic'>支出金额:</button>
 				<input type="text" placeholder="支出金额"/>
 			</div>
 			<div class="beizhu">
-				<label>其他备注：</label>
+				<!--<label class>其他备注：</label>-->
+				<button type="button" class="mui-btn mui-btn-yellow" id='traffic'>其他备注:</button>
 				<!--<input type="text" class="beizhu" placeholder="备注"/>-->
 				<textarea id="textarea" rows="2" placeholder="备注"></textarea>
 			</div>
@@ -53,14 +59,14 @@
 			<div class="caozuo">
 				<!--<input type="button" value="保存" />
 				<input type="button" value="返回" />-->
-				<button type="button" class="mui-btn mui-btn-primary">保存</button>
+				<button type="button" class="mui-btn mui-btn-blue" id="save">保存</button>
 				 <!--在mui框架中，有三种操作会触发页面关闭（执行mui.back方法）：
 
 				1 点击包含.mui-action-back类的控件
 				2 在屏幕内，向右快速滑动
 				3 Android手机按下back按键-->
 				<!--//关闭按钮：添加类mui-action-back-->
-				<button type="button" class="mui-btn mui-btn-primary mui-action-back">返回</button>
+				<button type="button" class="mui-btn mui-btn-blue mui-action-back">返回</button>
 			</div>
 		
 		</div>

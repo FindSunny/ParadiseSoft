@@ -1,7 +1,11 @@
 .main_body{
 	padding-top: 50px;
+	min-height: 550px;
+	height: 100%;
 	text-align: center;
 	vertical-align: middle;
+	background-image: url(../images/stars.jpg);
+	background-size: cover;
 }
 
 .main_body div{
